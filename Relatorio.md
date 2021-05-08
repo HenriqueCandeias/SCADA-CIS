@@ -31,7 +31,26 @@ Segurança Informática em Redes e Sistemas 2020-2021, segundo semestre
 
 ### Decisões de implementação da rede
 
-#### ...
+Gama de endereços alocado à Internet: 
+88.60.0.0/22 dividido em 3 blocos
+
+LAN PC-Internet :  88.60.0.0 - 88.60.0.255 (88.60.0.0/24)
+LAN DNS-root:      88.60.1.0 - 88.60.1.255 (88.60.1.0/24)
+LAN DNS-pt:        88.60.2.0 - 88.60.3.255 (88.60.2.0/23)
+
+Gama de endereços alocados à ICI:
+95.92.192.0/20 dividido em 9 blocos
+
+LAN corporate:         95.92.192.0 - 95.92.193.255 (95.92.192.0/23)
+LAN services:          95.92.194.0 - 95.92.195.255 (95.92.194.0/23)
+LAN SCADA:             95.92.196.0 - 95.92.197.255 (95.92.196.0/23)
+LAN data-historian:    95.92.198.0 - 95.92.199.255 (95.92.198.0/23)
+LAN SCADA-sub-e1:      95.92.200.0 - 95.92.201.255 (95.92.200.0/23)
+LAN SCADA-sub-e2:      95.92.202.0 - 95.92.203.255 (95.92.202.0/23)
+LAN sub-e1:            95.92.204.0 - 95.92.205.255 (95.92.204.0/23)
+LAN sub-e2:            95.92.206.0 - 95.92.206.255 (95.92.206.0/24)
+LAN ICI-Internet:      95.92.207.0 - 95.92.207.255 (95.92.207.0/24)
+
 
 ### Decisões de implementação dos serviços
 
