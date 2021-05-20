@@ -9,7 +9,7 @@ Segurança Informática em Redes e Sistemas 2020-2021, segundo semestre
 **Grupo 6**
 
 *(usar imagens com 150px de altura; com o **rosto enquadrado**)*   
-![Henrique Candeias](Henrique_Candeias.jpg) ![João Rodrigues](22222-bob.png) ![Miguel Gonçalves](33333-charlie.png)
+![Henrique Candeias](Henrique_Candeias.jpg) ![João Rodrigues](22222-bob.png) ![Miguel Gonçalves](Miguel_Goncalves.jpg)
 
 | Número | Nome              | Correio eletrónico                                      |
 | -------|-------------------|---------------------------------------------------------|
