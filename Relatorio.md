@@ -18,7 +18,7 @@ Segurança Informática em Redes e Sistemas 2020-2021, segundo semestre
 
 ## Introdução
 
-Este relatório descreve a implementação de uma infraestrutura crítica de informação, com a finalidade de controlar e proteger a rede elétrica de uma região ou país. Para isso, esta rede será composta por três subredes distintas: a de um edifício central e de duas estações elétricas; e por diversos computadores, dispositivos de rede e serviços de WWW, DNS e DHCP. A emulação de todo o sistema será feita no software Kathara.
+Este relatório descreve a implementação de uma infraestrutura crítica de informação, com a finalidade de controlar e proteger a rede elétrica de uma região ou país. Para isso, após uma análise cuidada do enunciado, procedemos à elaboração da rede do sistema assim como a atribuição dos devidos endereços. De seguida, procedemos à implementação de diversos serviços para garantir a segurança e o correto funcionamento de todo o sistema.
 
 ## Diagrama de rede
 
