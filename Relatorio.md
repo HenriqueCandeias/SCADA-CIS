@@ -8,7 +8,6 @@ Segurança Informática em Redes e Sistemas 2020-2021, segundo semestre
 
 **Grupo 6**
 
-*(usar imagens com 150px de altura; com o **rosto enquadrado**)*   
 ![Henrique Candeias](Henrique_Candeias.jpg) ![João Rodrigues](Joao_Rodrigues.jpg) ![Miguel Gonçalves](Miguel_Goncalves.jpg)
 
 | Número | Nome              | Correio eletrónico                                      |
@@ -19,7 +18,7 @@ Segurança Informática em Redes e Sistemas 2020-2021, segundo semestre
 
 ## Introdução
 
-*(escrever descrição sumária, assumindo que o leitor já leu o enunciado)*
+O objetivo deste projeto consiste no desenvolvimento de uma infraestrutura crítica de informação, com a finalidade de controlar e proteger a rede elétrica de uma região ou país. Para isso, esta rede será composta por três subredes distintas: a de um edifício central e de duas estações elétricas; e por diversos computadores, dispositivos de rede e serviços de WWW, DNS e DHCP. A emulação de todo o sistema será feita no software Kathara.
 
 ## Diagrama de rede
 
