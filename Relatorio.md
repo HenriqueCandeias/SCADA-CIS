@@ -37,18 +37,15 @@ Apresentamos, de seguida, os endereços IP atribuídos a cada uma das interfaces
 |                         | eth2 -> 169.254.4.1                           |
 |                         | eth3 -> 169.254.3.2                           |
 |                         | eth4 -> 169.254.2.2                           |
-| Router-SCADA            | eth0 -> 95.92.204.1   ??                        |
-|                         | eth1 -> 169.254.6.1    ??                       |
-|                         | eth2 -> 95.92.196.1      ??                     |
-|                         | eth3 -> 169.254.5.1        ??                   |
-|                         | eth4 -> 95.92.204.3          ??                 |
-|                         | eth5 -> 169.254.4.2            ??               |
-| Router-Subestacao-1     | eth0 -> 95.92.204.4       ??                    |
-|                         | eth1 -> 169.254.5.2         ??                  |
-|                         | eth2 -> 95.92.200.1           ??                |
-| Router-Subestacao-2     | eth0 -> 95.92.204.2            ??               |
-|                         | eth1 -> 95.92.202.1            ??               |
-|                         | eth2 -> 169.254.6.2              ??             |
+| Router-SCADA            | eth0 -> 169.254.6.1                           |
+|                         | eth1 -> 95.92.196.1                           |
+|                         | eth2 -> 169.254.5.1                           |
+|                         | eth3 -> 169.254.4.2                           |
+|                         | VPN  -> 95.92.204.1                           |
+| Router-Subestacao-1     | eth0 -> 169.254.5.1                           |
+|                         | eth1 -> 95.92.200.1                           |
+| Router-Subestacao-2     | eth0 -> 95.92.202.1                           |
+|                         | eth1 -> 169.254.6.2                           |
 | Router-Internet         | eth0 -> 88.60.0.1                             |
 |                         | eth1 -> 88.60.2.1                             |
 |                         | eth2 -> 88.60.1.1                             |
@@ -60,7 +57,6 @@ Apresentamos, de seguida, os endereços IP atribuídos a cada uma das interfaces
 | DNS.pt                  | eth0 -> 88.60.2.2                             |
 | PC-Internet             | eth0 -> 88.60.0.2                             |
 
-?? -> ESTÁ INCOERENTE COM O QUE O HENRIQUE TEM NO LAB.CONF PORQUE AINDA NÃO SABEMOS SE TEMOS DE COLOCAR AS INTERFACES DA VPN.
 
 
 Gama de endereços alocado à Internet: 
