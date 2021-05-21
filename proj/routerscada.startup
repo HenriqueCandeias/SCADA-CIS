@@ -1,0 +1,6 @@
+ip addr add dev eth3 scope link 169.254.4.2/24
+ip addr add dev eth0 scope link 169.254.6.1/24
+
+
+ip link state dev eth3 up
+ip link state dev eth0 up
