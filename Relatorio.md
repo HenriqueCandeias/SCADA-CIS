@@ -29,27 +29,27 @@ Apresentamos, de seguida, os endereços IP atribuídos a cada uma das interfaces
 
 | Equipamento             | Interfaces                                    |
 | ------------------------|-----------------------------------------------|
-| IDS-corporate           | eht0 -> 169.254.2.1                           | 
-|                         | eht1 -> 95.92.192.1                           |
-| IDS-servicos            | eht0 -> 169.254.3.1                           |
+| IDS-corporate           | eth0 -> 169.254.2.1                           | 
+|                         | eth1 -> 95.92.192.1                           |
+| IDS-servicos            | eth0 -> 169.254.3.1                           |
 |                         | eth1 -> 95.92.194.1                           |
 | Router-Edificio-Central | eth0 -> 169.254.1.1                           |
 |                         | eth1 -> 95.92.198.1                           |
 |                         | eth2 -> 169.254.4.1                           |
 |                         | eth3 -> 169.254.3.2                           |
 |                         | eth4 -> 169.254.2.2                           |
-| Router-SCADA            | eth0 -> 95.92.204.1                           |
-|                         | eth1 -> 169.254.6.1                           |
-|                         | eth2 -> 95.92.196.1                           |
-|                         | eth3 -> 169.254.5.1                           |
-|                         | eth4 -> 95.92.204.3                           |
-|                         | eth5 -> 169.254.4.2                           |
-| Router-Subestacao-1     | eth0 -> 95.92.204.4                           |
-|                         | eth1 -> 169.254.5.2                           |
-|                         | eth2 -> 95.92.200.1                           |
-| Router-Subestacao-2     | eth0 -> 95.92.204.2                           |
-|                         | eth1 -> 95.92.202.1                           |
-|                         | eth2 -> 169.254.6.2                           |
+| Router-SCADA            | eth0 -> 95.92.204.1   ??                        |
+|                         | eth1 -> 169.254.6.1    ??                       |
+|                         | eth2 -> 95.92.196.1      ??                     |
+|                         | eth3 -> 169.254.5.1        ??                   |
+|                         | eth4 -> 95.92.204.3          ??                 |
+|                         | eth5 -> 169.254.4.2            ??               |
+| Router-Subestacao-1     | eth0 -> 95.92.204.4       ??                    |
+|                         | eth1 -> 169.254.5.2         ??                  |
+|                         | eth2 -> 95.92.200.1           ??                |
+| Router-Subestacao-2     | eth0 -> 95.92.204.2            ??               |
+|                         | eth1 -> 95.92.202.1            ??               |
+|                         | eth2 -> 169.254.6.2              ??             |
 | Router-Internet         | eth0 -> 88.60.0.1                             |
 |                         | eth1 -> 88.60.2.1                             |
 |                         | eth2 -> 88.60.1.1                             |
@@ -61,7 +61,7 @@ Apresentamos, de seguida, os endereços IP atribuídos a cada uma das interfaces
 | DNS.pt                  | eth0 -> 88.60.2.2                             |
 | PC-Internet             | eth0 -> 88.60.0.2                             |
 
-
+?? -> ESTÁ INCOERENTE COM O QUE O HENRIQUE TEM NO LAB.CONF PORQUE AINDA NÃO SABEMOS SE TEMOS DE COLOCAR AS INTERFACES DA VPN.
 
 
 ## Justificação de opções
