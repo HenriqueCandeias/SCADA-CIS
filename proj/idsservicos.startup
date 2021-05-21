@@ -1,0 +1,6 @@
+ip addr add dev eth0 scope link 169.254.3.1/24
+ip addr add dev eth1 95.92.194.1/23
+ip link set dev eth0 up
+ip link set dev eth1 up
+
+ip route add default via 169.254.3.2
