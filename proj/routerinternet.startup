@@ -1,10 +1,10 @@
-ip addr add dev eth0 88.60.0.1
-ip addr add dev eth1 88.60.2.1
-ip addr add dev eth2 88.60.1.1
-ip addr add dev eth3 169.254.1.2 #scope link ???
+ip addr add dev eth0 88.60.0.1/24
+ip addr add dev eth1 88.60.2.1/23
+ip addr add dev eth2 88.60.1.1/24
+ip addr add dev eth3 169.254.1.2/24 #scope link ???
 ip link set dev eth0 up
 ip link set dev eth1 up
 ip link set dev eth2 up
 ip link set dev eth3 up
 
-ip route add 95.92.192.0/20 via 169.254.1.1 dev eth3
+#ip route add 95.92.192.0/20 via 169.254.1.1 dev eth3
