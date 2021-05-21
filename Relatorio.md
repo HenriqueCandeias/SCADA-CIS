@@ -22,10 +22,9 @@ Este relatório descreve a implementação de uma infraestrutura crítica de inf
 
 ## Diagrama de rede
 
-<img width="684" alt="rede_ultima_iteracao" src="https://user-images.githubusercontent.com/71899990/118989303-d6271900-b979-11eb-8b91-f1509965a270.png">
+![Topologia da rede](Topologia_da_rede.jpg)
 
-*(se necessário, acrescentar algum texto explicativo)*
-Apresentamos, de seguida, os endereços IP atribuídos a cada uma das interfaces (as subredes correspondentes estão na secção seguinte):
+Apresentamos, de seguida, os endereços IP atribuídos a cada uma das interfaces (as subredes correspondentes encontram-se de seguida):
 
 | Equipamento             | Interfaces                                    |
 | ------------------------|-----------------------------------------------|
@@ -64,11 +63,8 @@ Apresentamos, de seguida, os endereços IP atribuídos a cada uma das interfaces
 ?? -> ESTÁ INCOERENTE COM O QUE O HENRIQUE TEM NO LAB.CONF PORQUE AINDA NÃO SABEMOS SE TEMOS DE COLOCAR AS INTERFACES DA VPN.
 
 
-## Justificação de opções
-
-### Decisões de implementação da rede
-
 Gama de endereços alocado à Internet: 
+
 88.60.0.0/22 dividido em 3 blocos
 
 | Subrede          | Gama de enderecos                      |
@@ -78,7 +74,9 @@ Gama de endereços alocado à Internet:
 | LAN DNS-pt       | 88.60.2.0 - 88.60.3.255 (88.60.2.0/23) | 
 
 
+
 Gama de endereços alocados à ICI e às subestações:
+
 95.92.192.0/20 dividido em 8 blocos
 
 
@@ -93,6 +91,7 @@ Gama de endereços alocados à ICI e às subestações:
 | LAN VPN            | 95.92.204.0 - 95.92.205.255 (95.92.204.0/23)  | 
 
         
+
 Gama de endereços alocados às ligações link-local:
 
 | Subrede                                 | Gama de enderecos                             |
@@ -105,8 +104,27 @@ Gama de endereços alocados às ligações link-local:
 | LAN ROUTER-SCADA - ROUTER SUBESTACAO-2  | 169.254.6.0 - 169.254.6.255 (169.254.6.0/24)  |
 
 
-  
- 
+
+
+## Justificação de opções
+
+### Decisões de implementação da rede
+
+Nesta secção pretendemos explicar o porquê das decisões não triviais tomadas ao longo da construção da topologia da rede.
+
+Na primeira interpretação do enunciado, tínhamos a seguinte topologia de rede:
+
+![Topologia_da_rede_inicial](Topologia_da_rede_inicial.jpg)
+        
+
+* Mesmo tendo pensado nas duas alternativas, decidimos colocar os equipamentos da Internet em subredes diferentes em vez de na mesma subrede;
+* O posicionamento do Switch-SCADA e do PC1 (na versão mais recente, PC-SCADA) foi alterado, porque se, por exemplo, a Estacao-SCADA-2 (na versão mais recente, PC-Subestacao-2) pretende-se enviar um pacote o PC-Eng-1, ao passar pela LAN entre o Router-SCADA e o Router-Edificio-Central, como o Switch-SCADA na verdade é um *collision domain* no Kathara, então funciona como um hub, pelo que o pacote iria chegar também ao PC1 incorretamente;
+* Foi colocada uma ligação visível na topologia, de forma a ser representada a VPN, cumprindo os requisitos do enunciado: "A VPN tem dois troços: *router* da subestação 1 - *router* da LAN SCADA e *router* da subestação 2 - *router* da LAN SCADA". Assim, decidimos alocar endereços à VPN dentro da gama atribuída à ICI. Os dois troços da VPN estão dentro da mesma gama de endereços porque, no ponto de vista da VPN, o Router-SCADA é como se fosse um *collision domain* pois, na verdade, a proteção do tráfego proveniente das duas subestações, é controlada pela mesma VPN, no nosso entender;
+* Em relação à implementação dos IDS, pensámos em implementar segundo o enunciado: "Este detetor deve correr num PC que atue como um *switch* de rede" na primeira iteração mas, depois de obter feedback do professor, pareceu-nos melhor implementa-los como um *router*, porque, pelo que percebemos, implementar um switch no Kathara sem ser como um *colision domain* seria mais complicado;
+* Em relação às ligações link-local, inicialmente apenas colocámos a que estava dita explicitamente no enunciado mas, depois de perceber melhor o seu propósito (de forma a não usar endereços úteis atribuído à rede ICI (95.92.192.0/20), usámos as ligações link-local apenas para ligações diretas entre routers);
+* Em relação à ligação física entre as subsestações e o Router-SCADA, foi intuitivo para o grupo implementar diretamente ligadas ao Router-SCADA mas, depois, apercebemo-nos que havia uma alternativa: as ligaçõe física de cada subestação estar ligada ao Router-Internet. Esta última opção não nos pareceu muito eficiente num ponto de vista académico, porque o pacote encriptado pelo cliente VPN teria de fazer um percuso maior para poder chegar ao servidor VPN (Router-SCADA) e, aí, ser desencriptado, pelo que mantivemos a decisão inicial.
+
+
 
 ### Decisões de implementação dos serviços
 
