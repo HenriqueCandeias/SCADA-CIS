@@ -1,6 +1,13 @@
-ip addr add dev eth3 scope link 169.254.4.2/24
 ip addr add dev eth0 scope link 169.254.6.1/24
+ip addr add dev eth1 95.92.196.1/23
+ip addr add dev eth2 scope link 169.254.5.1/24
+ip addr add dev eth3 scope link 169.254.4.2/24
 
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip link set dev eth2 up
+ip link set dev eth3 up
 
-ip link state dev eth3 up
-ip link state dev eth0 up
+ip route add 95.92.200.0/23 via 169.254.5.1 dev eth2
+ip route add 95.92.202.0/23 via 169.254.6.2 dev eth0
+ip route add default via 169.254.4.1 dev eth3
