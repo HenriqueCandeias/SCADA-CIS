@@ -1,0 +1,15 @@
+$TTL    60000
+@   IN  SOA dns.acdc.pt. root.dns.acdc.pt. (
+                        20210522 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+
+@ IN NS dns.acdc.pt.
+dns IN A 95.92.194.2 # BEFORE dns.acdc.pt. IN A 95.92.194.2
+
+historian IN A 95.92.198.2 #IDEIA POR NS
+
+www IN A 95.92.194.3
