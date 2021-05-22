@@ -42,7 +42,7 @@ Apresentamos, de seguida, os endereços IP atribuídos a cada uma das interfaces
 |                         | eth2 -> 169.254.5.1                           |
 |                         | eth3 -> 169.254.4.2                           |
 |                         | VPN  -> 95.92.204.1                           |
-| Router-Subestacao-1     | eth0 -> 169.254.5.1                           |
+| Router-Subestacao-1     | eth0 -> 169.254.5.2                           |
 |                         | eth1 -> 95.92.200.1                           |
 | Router-Subestacao-2     | eth0 -> 95.92.202.1                           |
 |                         | eth1 -> 169.254.6.2                           |
