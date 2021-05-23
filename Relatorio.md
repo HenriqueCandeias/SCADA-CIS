@@ -124,6 +124,11 @@ Na primeira interpretação do enunciado, tínhamos a seguinte topologia de rede
 
 ### Decisões de implementação dos serviços
 
+De forma a testar que o curl funciona foram feitos os seguintes comandos, e com sucesso:
+* curl -v 'http://localhost/public/siteEng2.html'
+* curl -v 'http://localhost/public/siteEng1.html'
+* curl -v 'http://localhost/public/siteICI.html'
+
 #### ...
 
 ## Escolha do IDS
