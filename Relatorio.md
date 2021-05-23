@@ -22,7 +22,7 @@ Este relatório descreve a implementação de uma infraestrutura crítica de inf
 
 ## Diagrama de rede
 
-![Topologia da rede](Topologia_da_rede.jpg)
+![Topologia da Rede](Topologia_da_Rede.jpg)
 
 Apresentamos, de seguida, os endereços IP atribuídos a cada uma das interfaces (as subredes correspondentes encontram-se de seguida):
 
@@ -110,7 +110,7 @@ Nesta secção pretendemos explicar o porquê das decisões não triviais tomada
 
 Na primeira interpretação do enunciado, tínhamos a seguinte topologia de rede:
 
-![Topologia_da_rede_inicial](Topologia_da_rede_inicial.jpg)
+![Topologia_da_Rede_inicial](Topologia_da_Rede_inicial.jpg)
         
 
 * Mesmo tendo pensado nas duas alternativas, decidimos colocar os equipamentos da Internet em subredes diferentes em vez de na mesma subrede;
