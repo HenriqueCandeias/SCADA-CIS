@@ -124,9 +124,19 @@ Na primeira interpretação do enunciado, tínhamos a seguinte topologia:
 
 ### Decisões de implementação dos serviços
 
-DHCP
-* 
-#### ...
+
+
+#### VPN
+
+#### SSH
+
+#### FIREWALLS
+
+#### HTTPS
+
+#### DHCP
+
+ 
 
 ## Escolha do IDS
 
