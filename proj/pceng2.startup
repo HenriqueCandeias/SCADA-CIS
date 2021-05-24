@@ -1,4 +1,6 @@
-ip addr add dev eth0 95.92.192.3/23 #REMOVE AFTER DHCP
-ip link set dev eth0 up
+#ip addr add dev eth0 95.92.192.3/23 #REMOVE AFTER DHCP
+#ip link set dev eth0 up
 
-ip route add default via 95.92.192.1 #REMOVE AFTER DHCP???
+#ip route add default via 95.92.192.1 #REMOVE AFTER DHCP???
+
+/etc/init.d/networking restart

@@ -4,3 +4,6 @@ ip addr add dev eth1 95.92.192.1/23
 ip link set dev eth1 up
 
 ip route add default via 169.254.2.2
+
+#Start DHCP server
+service isc-dhcp-server start

@@ -11,3 +11,7 @@ ip link set dev eth3 up
 ip route add 95.92.200.0/23 via 169.254.5.2 dev eth2
 ip route add 95.92.202.0/23 via 169.254.6.2 dev eth0
 ip route add default via 169.254.4.1 dev eth3
+
+#Start DHCP
+service isc-dhcp-server start
+
