@@ -108,7 +108,7 @@ Gama de endereços alocados às ligações link-local:
 
 Nesta secção pretendemos explicar o porquê das decisões não triviais tomadas ao longo da construção da topologia da rede.
 
-Na primeira interpretação do enunciado, tínhamos a seguinte topologia de rede:
+Na primeira interpretação do enunciado, tínhamos a seguinte topologia:
 
 ![Topologia_da_Rede_inicial](Topologia_da_Rede_inicial.jpg)
         
@@ -124,7 +124,19 @@ Na primeira interpretação do enunciado, tínhamos a seguinte topologia de rede
 
 ### Decisões de implementação dos serviços
 
-#### ...
+
+
+#### VPN
+
+#### SSH
+
+#### FIREWALLS
+
+#### HTTPS
+
+#### DHCP
+
+ 
 
 ## Escolha do IDS
 
