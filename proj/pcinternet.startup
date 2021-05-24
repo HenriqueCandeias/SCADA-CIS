@@ -5,3 +5,6 @@ ip route add default via 88.60.0.1
 
 # SSH config
 cp -a /shared/ssh/pcinternet/. /root/.ssh/
+cd /root/.ssh/
+chmod 700 id_rsa id_rsa.pub known_hosts
+
