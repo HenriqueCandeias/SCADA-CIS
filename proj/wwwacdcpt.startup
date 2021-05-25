@@ -17,3 +17,12 @@ cp -r /shared/apache2 /etc
 
 # Restart the Apache service.
 service apache2 restart
+
+# SSH Config
+/etc/init.d/ssh start
+adduser admin --disabled-password
+su -c 'mkdir .ssh' - admin
+su -c 'chmod 700 .ssh' - admin
+su -c 'cd .ssh' - admin
+su -c 'cp /shared/ssh/wwwacdcpt/authorized_keys /home/admin/.ssh/' - admin
+

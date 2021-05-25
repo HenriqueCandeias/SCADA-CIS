@@ -108,7 +108,7 @@ Gama de endereços alocados às ligações link-local:
 
 Nesta secção pretendemos explicar o porquê das decisões não triviais tomadas ao longo da construção da topologia da rede.
 
-Na primeira interpretação do enunciado, tínhamos a seguinte topologia de rede:
+Na primeira interpretação do enunciado, tínhamos a seguinte topologia:
 
 ![Topologia_da_Rede_inicial](Topologia_da_Rede_inicial.jpg)
         
@@ -124,12 +124,25 @@ Na primeira interpretação do enunciado, tínhamos a seguinte topologia de rede
 
 ### Decisões de implementação dos serviços
 
-De forma a testar que o curl funciona foram feitos os seguintes comandos, e com sucesso:
-* curl -v 'http://localhost/public/siteEng2.html'
-* curl -v 'http://localhost/public/siteEng1.html'
-* curl -v 'http://localhost/public/siteICI.html'
 
-#### ...
+
+#### VPN
+
+#### SSH
+
+#### FIREWALLS
+
+#### HTTPS
+
+#### DHCP
+
+De forma a cumprir com os requisitos do enunciado e fornecer endereços IPs dinâmicos aos PCs da LAN corporate, PC da LAN SCADA e PCs das LANs de controlo, foram colocados quatro DHCP servers (um servidor local para cada LAN). Na LAN corporate, SCADA, Subestação 1 e Subestação 2 os DHCP servers foram colocados no router IDS-corporate, Router-SCADA, Router-Subestacao-1 e Router-Subestacao-2, respetivamente. Como bibliografia, foram seguidos os exemplos disponibilizados no enunciado.
+
+Na parte de implementação de todos os servidores:
+
+* No ficheiro /etc/default/isc-dhcp-server foi colocada qual a interface em que o servidor está disponível para distribuir os endereços dinâmicos;
+* No ficheiro /etc/dhcp/dhcpd.conf foram descomentadas as linhas consideradas relevantes: garantir que o DHCP em questão é o único da LAN; qual a subrede e máscara em questão; qual o endereço IP da interface que se pretende colocar o DHCP a funcionar; endereço de broadcast para garantir conectividade.
+
 
 ## Escolha do IDS
 

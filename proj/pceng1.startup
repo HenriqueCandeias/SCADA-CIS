@@ -5,3 +5,8 @@
 
 #Start DHCP client
 /etc/init.d/networking restart
+
+# SSH config
+cp -a /shared/ssh/pceng1/. /root/.ssh/
+cd /root/.ssh/
+chmod 700 id_rsa id_rsa.pub known_hosts
