@@ -14,3 +14,9 @@ TESTE PROGRAMA DE ACESSO À WEB (HTTPS)
 Tentar colocar os certificados num pc para fazer o curl sem o '-k':
 
 * curl 'https://95.92.194.3/public/siteICI.html' no PCEng1, por exemplo.
+
+TESTE DHCP
+
+1. Após fazer "kathara lstart", anallisar as consolas dos containers que são DHCP servers e DHCP clients e concluir que o DHCP está a funcionar
+2. Fazer "ip a" nos DHCP clients e visualizar que foi atribuído um endereço dentro da range estabelecida
+3. Fazer ping de um equipamento a outro e ver que funciona.
