@@ -11,9 +11,9 @@ TESTE PROGRAMA DE ACESSO À WEB (HTTPS)
 * curl -k 'https://95.92.194.3/public/siteEng1.html'
 * curl -k 'https://95.92.194.3/public/siteEng2.html'
 
-Tentar colocar os certificados num pc para fazer o curl sem o '-k':
+Tentar colocar os certificados no PCEng1 para fazer o curl sem o '-k':
 
-* curl 'https://95.92.194.3/public/siteICI.html' no PCEng1, por exemplo.
+* curl 'https://95.92.194.3/public/siteICI.html' no PCEng1
 
 TESTE DHCP
 
