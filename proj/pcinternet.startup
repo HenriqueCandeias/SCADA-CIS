@@ -1,10 +1,12 @@
+##IP address configuration
 ip addr add dev eth0 88.60.0.2/24
 ip link set dev eth0 up
-
 ip route add default via 88.60.0.1
 
-# SSH config
+
+##SSH config
+
+#Copy the already created keys and known hosts into pcinternet container
 cp -a /shared/ssh/pcinternet/. /root/.ssh/
 cd /root/.ssh/
 chmod 700 id_rsa id_rsa.pub known_hosts
-

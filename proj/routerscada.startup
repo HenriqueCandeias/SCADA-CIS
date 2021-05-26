@@ -1,3 +1,4 @@
+##IP address interface configuration
 ip addr add dev eth0 scope link 169.254.6.1/24
 ip addr add dev eth1 95.92.196.1/23
 ip addr add dev eth2 scope link 169.254.5.1/24
@@ -8,10 +9,45 @@ ip link set dev eth1 up
 ip link set dev eth2 up
 ip link set dev eth3 up
 
+
+#Static route to reach LAN Subestacao-1
 ip route add 95.92.200.0/23 via 169.254.5.2 dev eth2
+
+#Static route to reach LAN Subestacao-1
 ip route add 95.92.202.0/23 via 169.254.6.2 dev eth0
+
+##Static route to reach the rest of the ICI 
 ip route add default via 169.254.4.1 dev eth3
 
-#Start DHCP
+
+#Permit all traffic from LAN SCADA to LAN Subestacao1
+iptables -A FORWARD -s 95.92.196.0/23 -d 95.92.200.0/23 -j ACCEPT
+
+#Permit all traffic from LAN Subestacao1 to LAN SCADA
+iptables -A FORWARD -s 95.92.200.0/23 -d 95.92.196.0/23 -j ACCEPT
+
+#Permit all traffic from LAN SCADA to LAN Subestacao2
+iptables -A FORWARD -s 95.92.196.0/23 -d 95.92.202.0/23 -j ACCEPT
+
+#Permit all traffic from LAN Subestacao2 to LAN SCADA
+iptables -A FORWARD  -s 95.92.202.0/23 -d 95.92.196.0/23 -j ACCEPT
+
+#Permit DNS service from all ICI hosts to the DMZ LAN
+iptables -A FORWARD -p udp -s 95.92.192.0/20 -d 95.92.194.2 --dport 53 -j ACCEPT
+iptables -A FORWARD  -p udp -s 95.92.194.2 -d 95.92.192.0/20 --sport 53 -j ACCEPT
+
+#Permit ping between all ICI's hosts
+iptables -A FORWARD -p icmp --icmp-type echo-request -s 95.92.192.0/20 -d 95.92.192.0/20 -j ACCEPT
+iptables -A FORWARD -p icmp --icmp-type echo-reply -s 95.92.192.0/20 -d 95.92.192.0/20 -j ACCEPT
+
+#Remaining unspecified traffic is blocked
+iptables -A FORWARD -j DROP
+iptables -A INPUT -j DROP
+iptables -A OUTPUT -j DROP
+
+
+##DHCP
+
+#Start DHCP server
 service isc-dhcp-server start
 

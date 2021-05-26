@@ -1,26 +1,35 @@
+##IP address interface configuration
 ip addr add dev eth0 95.92.194.3/23
 ip link set dev eth0 up
-
 ip route add default via 95.92.194.1
 
-# Apache Server Config
 
+##Apache Server Config
+
+#Start apache2 service
 /etc/init.d/apache2 start
 
-# Enable Apache module named: Mod_ssl.
+#Enable Apache module named: Mod_ssl.
 a2enmod ssl
 
-# Enable Apache module named: Mod_rewrite.
+#Enable Apache module named: Mod_rewrite.
 a2enmod rewrite
 
 cp -r /shared/apache2 /etc
 
-# Restart the Apache service.
+#Restart the Apache service.
 service apache2 restart
 
-# SSH Config
+
+##SSH Config
+
+#Start the ssh service
 /etc/init.d/ssh start
+
+#Create the admin user and disable password authentication
 adduser admin --disabled-password
+
+#Create directory .ssh and copy authorized_keys file into it
 su -c 'mkdir .ssh' - admin
 su -c 'chmod 700 .ssh' - admin
 su -c 'cd .ssh' - admin
