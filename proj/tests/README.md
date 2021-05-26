@@ -37,9 +37,9 @@ Na consola do PC Subestacao 1, testar conectividade com o PC SCADA:
 
 TESTES FIREWALL
 
-HTTPS
+### HTTPS
 
-Requisito 1
+#### Requisito 1
 
  Fazer curl de uma página HTTPS desde o PCInternet para o servidor WWW:
 
@@ -61,7 +61,7 @@ Depois, para mostrar que apenas se pode aceder aos serviços a partir do PCInter
 
 e ver que não funciona.
 
-Requisito 2
+#### Requisito 2
 
 Fazer um curl de uma página em HTTPS desde o PCEng1 para o servidor WWW:
 
@@ -75,7 +75,7 @@ Fazer um ping desde, por exemplo, o PC SCADA até ao servidor DNS:
 
 e ver que funciona (por causa do Requisito 5)
 
-Requisito 3
+#### Requisito 3
 
 Fazer ping desde o PC SCADA até ao PC Subestacao 1:
 
@@ -89,11 +89,11 @@ Fazer ping desde o PC SCADA até ao PC Subestacao 2:
 
 e ver que funciona
 
-Requisito 4
+#### Requisito 4
 
 NOTA: O teste ao DNS não funciona, pela sua implementação parcial mas a regra da Firewall está no ficheiro startup do router SCADA.
 
-Requisito 5
+#### Requisito 5
 
 Fazer ping desde o PCEng1, por exemplo, o PCInternet:
 
@@ -101,11 +101,11 @@ Fazer ping desde o PCEng1, por exemplo, o PCInternet:
 
 e ver que funciona
 
-Requisito 6
+#### Requisito 6
 
 Não foi realizado.
 
-Requisito 7
+#### Requisito 7
 
 Fazer SSH desde o PC SCADA para o WWW:
 
