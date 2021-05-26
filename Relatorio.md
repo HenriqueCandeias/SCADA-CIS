@@ -4,8 +4,6 @@ Segurança Informática em Redes e Sistemas 2020-2021, segundo semestre
 
 ## Autores
 
-*(limite: 1500 palavras)*
-
 **Grupo 6**
 
 ![Henrique Candeias](Henrique_Candeias.jpg) ![João Rodrigues](Joao_Rodrigues.jpg) ![Miguel Gonçalves](Miguel_Goncalves.jpg)
@@ -127,6 +125,7 @@ Na primeira interpretação do enunciado, tínhamos a seguinte topologia:
 
 
 #### VPN
+Este serviço não está funcional devido ao facto de que as permissões que os ficheiros das chaves e dos certificados possuem, no servidor, não serem válidas - alterámos as permissões nos ficheiros da pasta de arranque do routerscada (servidor) mas, mesmo assim, quando a máquina é inicializada, as permissões continuam a ser as antigas. Decidimos prosseguir para outros serviços. Os clientes não estão a funcionar devido a um erro no ficheiro de configuração (client.conf).
 
 #### SSH
 Para a implementação deste serviço, foram previamente obtidas as chaves pública e privada do pcinternet, pceng1 e pceng2, com recurso ao comando 'ssh-keygen -t rsa' e guardadas na pasta shared. Criou-se também o ficheiro authorized_keys para o dnsacdcpt e para o wwwacdcpt, contendo as chaves públicas de cada uma das máquinas anteriores, e guardaram-se esses ficheiros também na pasta shared. Nos ficheiros de dnsacdcpt.startup e no wwwacdcpt.startup, inicia-se o serviço ssh, cria-se o utilizador 'admin' com a opção de autenticação por password desativada e copia-se o ficheiro authorized_keys respetivo da pasta shared para o container docker. Nos ficheiros de pcinternet.startup, pceng1.startup e pceng2.startup, copiam-se as chaves previamente criadas na pasta shared para os respetivos containers.
@@ -177,7 +176,5 @@ Pontos fortes:
 
 Pontos a melhorar:
 * Perdemos muito tempo com erros que à partida não seriam complicados;
-* Mãos na massa de forma mais contínua e mais cedo.
 
 Os requisitos da firewall na nossa interpretação, entravam em conflitos uns com os outros.
-
