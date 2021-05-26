@@ -134,7 +134,15 @@ A criação prévia de ficheiros deveu-se ao facto de existir dependências de c
 
 #### FIREWALLS
 
+* Assumimos que a Internet é apenas o endereço 88.60.0.0/22.
+* No segundo requisito é dito "as máquinas da DMZ não podem comunicar com o resto da rede da ICI" e, no quinto requisito, é dito "deve ser possível fazer *ping* entre todas as máquinas da rede ICI...", pelo que assumimos que é possível que as máquinas da DMZ possam comunicar com o resto da rede.
+* Embora implementadas, não é possível testar as regras com o DNS, pois não ficou funcional.
+* Não fizemos o sexto requisito.
+* Assumimos que, nos requisitos do enunciado, o que não está devidamente explicito que é permitido então é bloqueado.
+
 #### HTTPS
+
+Primeiramente,  as páginas foram implementadas com HTTP. De seguida, com o requisito de implementar as páginas com HTTPS, é possível aceder às páginas pessoais dos Engenheiros e à página da ICI através de HTTPS. Na tentativa de aceder às páginas com HTTP, foi implementada a funcionalidade de indicar que, na consola, deja indicado que a página já não se encontra em HTTP, mas sim em HTTPS. Em relação aos certificados, que deve ser possível em pelo menos um PC de exemplo, tentámos colocar o certificado gerado no servidor WWW (etc/apache2/certificate/apache-certificate.crt) na pasta etc/ssl/certs do pceng1, para poder fazer o pedido curl sem recurso à flag "-k", mas, contudo, não funciona.
 
 #### DHCP
 
@@ -149,6 +157,7 @@ Na parte de implementação de todos os servidores:
 ## Escolha do IDS
 
 *(identificar e descrever alternativas consideradas)*
+Escolhemos o NIDS, expecificamente o snort.
 
 *(justificar escolha)*
 
@@ -160,3 +169,4 @@ Na parte de implementação de todos os servidores:
 *(pontos fortes, pontos a melhorar)*
 
 *(sugestões para melhorar o projeto em edições futuras)*
+Os requisitos da firewall na nossa interpretação, entravam em conflitos uns com os outros.
