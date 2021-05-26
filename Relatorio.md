@@ -132,6 +132,8 @@ Na primeira interpretação do enunciado, tínhamos a seguinte topologia:
 
 #### FIREWALLS
 
+* Assumimos que a Internet é apenas o endereço 88.60.0.0/22.
+
 #### HTTPS
 
 #### DHCP
