@@ -133,6 +133,7 @@ Na primeira interpretação do enunciado, tínhamos a seguinte topologia:
 #### FIREWALLS
 
 * Assumimos que a Internet é apenas o endereço 88.60.0.0/22.
+* Assumimos que, nos requisitos do enunciado, o que não está devidamente explicito que é permitido então é bloqueado.
 
 #### HTTPS
 
@@ -149,6 +150,7 @@ Na parte de implementação de todos os servidores:
 ## Escolha do IDS
 
 *(identificar e descrever alternativas consideradas)*
+Escolhemos o NIDS, expecificamente o snort.
 
 *(justificar escolha)*
 
@@ -160,3 +162,4 @@ Na parte de implementação de todos os servidores:
 *(pontos fortes, pontos a melhorar)*
 
 *(sugestões para melhorar o projeto em edições futuras)*
+Os requisitos da firewall estavam muito vagos e, na nossa interpretação, entravam em conflitos uns com os outros.
