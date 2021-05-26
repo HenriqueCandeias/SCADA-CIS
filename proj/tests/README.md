@@ -17,8 +17,10 @@ TESTE DHCP
 2. Fazer "ip a" nos DHCP clients e visualizar que foi atribuído um endereço dentro da range estabelecida
 3. Fazer ping de um equipamento a outro e ver que funciona:
 
-Na consola do PC SCADA, testar conectividade com o PC Eng1: ping <Endereço IP dinàmico do PC Eng1>
-Na consola do PC Subestacao 1, testar conectividade com o PC SCADA: ping <Endereço IP dinâmico do PC SCADA>
+Na consola do PC SCADA, testar conectividade com o PC Eng1: 
+* ping <Endereço IP dinàmico do PC Eng1>
+Na consola do PC Subestacao 1, testar conectividade com o PC SCADA: 
+* ping <Endereço IP dinâmico do PC SCADA>
 
 
 TESTE SSH
