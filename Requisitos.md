@@ -18,39 +18,39 @@ Nota: o que não estiver respondido é porque não foi realizado.
 
 ### Quantos routers implementou dentro da ICI (excluindo a Internet)? 6
 
-### Implementou o servidor DNS da ICI?
+### Implementou o servidor DNS da ICI? Foi implementado, mas não está funcional
 
-### Implementou o servidor WWW da ICI?
+### Implementou o servidor WWW da ICI? Sim
 
-### Implementou os dois PCs da ICI?
+### Implementou os dois PCs da ICI? Sim
 
 ### Criou o PC da LAN SCADA? Sim
 
 ### Criou o PC historian? Sim
 
-### Implementou as subredes das suas subestações?
+### Implementou as subredes das suas subestações? Sim
 
 ### Implementou os dois switches dessas subredes? Sim
 
 ## Serviços
 
-### Criou uma conta admin nos dois servidores da LAN de serviços?
+### Criou uma conta admin nos dois servidores da LAN de serviços? Sim
 
 ### Implementou alguma coisa no PC historian? Não
 
-### Implementou o MRTG? Funciona?
+### Implementou o MRTG? Funciona? --
 
-### Quantas páginas web com gráficos está a fornecer o MRTG?
+### Quantas páginas web com gráficos está a fornecer o MRTG? --
 
-### Configurou o OpenSSH?
+### Configurou o OpenSSH? Sim
 
-### É possível fazer ssh e scp do PC da Internet para os servidores da LAN de serviços?
+### É possível fazer ssh e scp do PC da Internet para os servidores da LAN de serviços? Sim
 
-### É possível fazer ssh e scp dos PCs dos engenheiros para os dois servidores da LAN de serviços?
+### É possível fazer ssh e scp dos PCs dos engenheiros para os dois servidores da LAN de serviços? Sim
 
-### Ao fazer ssh e scp, a autenticação é baseada em criptografia de chave pública?
+### Ao fazer ssh e scp, a autenticação é baseada em criptografia de chave pública? Sim
 
-### Configurou as VPNs usando o pacote OpenVPN? Funcionam?
+### Configurou as VPNs usando o pacote OpenVPN? Funcionam? Está parcialmente configurado. Não funciona.
 
 ### Configurou o netfilter / iptables no router do edifício central?
 
@@ -66,8 +66,8 @@ Nota: o que não estiver respondido é porque não foi realizado.
 
 ### Indique o conteúdo do teste usado para testar o IDS
 
-### Configurou DHCP? Funciona?
+### Configurou DHCP? Funciona? Sim. Funciona
 
-### Configurou HTTPS? Funciona?
+### Configurou HTTPS? Funciona? Sim. Funciona
 
-### Configurou DNSSEC? Funciona?
+### Configurou DNSSEC? Funciona? --
