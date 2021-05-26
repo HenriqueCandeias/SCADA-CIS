@@ -1,4 +1,6 @@
+##IP address interface configuration
 ip addr add dev eth0 95.92.198.2/23
 ip link set dev eth0 up
 
+#Default Gateway
 ip route add default via 95.92.198.1

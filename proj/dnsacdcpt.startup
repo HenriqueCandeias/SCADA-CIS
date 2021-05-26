@@ -1,12 +1,14 @@
+#IP address interface configuration
 ip addr add dev eth0 95.92.194.2/23
 ip link set dev eth0 up
 
+
 ip route add default via 95.92.194.1
 
-# DNS Config
+#DNS Config
 /etc/init.d/bind start
 
-# SSH Config
+#SSH Config
 /etc/init.d/ssh start
 adduser admin --disabled-password
 su -c 'mkdir .ssh' - admin
