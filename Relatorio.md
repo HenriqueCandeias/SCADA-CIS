@@ -157,17 +157,21 @@ Na parte de implementação de todos os servidores:
 ## Escolha do IDS
 
 *(identificar e descrever alternativas consideradas)*
-Escolhemos o NIDS, expecificamente o snort.
+Foram consideradas como alternativas: HIDS (implementação do IDS numa máquina em específico) mas, ao ler melhor o enunciado, decidimos que o melhor seria implementar o IDS em routers, que estão bem identificados na topologia de rede.
+Critérios para a escolha do NIDS:
+* Pretende-se monitorizar em dois pontos da rede, nomeadamente entre dois equipamentos, portanto o mais apropriado é um Network IDS;
+* 
+* 
 
 *(justificar escolha)*
 
 
 ## Conclusão
 
-*(o que foi alcançado)*
 Com este projeto, o grupo relembrou muito dos conceitos base aprendidos na cadeira de Arquitetura de Redes - configuração de equipamentos, garantir conectividade numa dada rede - embora de uma forma mais simples (não foi necessãrio, neste projeto, configurar protocolos de routing). Assim, este projeto complementa o que já foi dito porque, para além de garantir conectividade numa rede, é preciso garantir a sua segurança. 
 
 *(pontos fortes, pontos a melhorar)*
 
 *(sugestões para melhorar o projeto em edições futuras)*
 Os requisitos da firewall na nossa interpretação, entravam em conflitos uns com os outros.
+
