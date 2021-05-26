@@ -52,19 +52,19 @@ Nota: o que não estiver respondido é porque não foi realizado.
 
 ### Configurou as VPNs usando o pacote OpenVPN? Funcionam? Está parcialmente configurado. Não funciona.
 
-### Configurou o netfilter / iptables no router do edifício central?
+### Configurou o netfilter / iptables no router do edifício central? Sim
 
-### Esse router bloqueia a maior parte dos acessos da Internet à ICI?
+### Esse router bloqueia a maior parte dos acessos da Internet à ICI? Sim
 
-### Esse router bloqueia a maior parte dos acessos da DMZ às outras subredes da ICI?
+### Esse router bloqueia a maior parte dos acessos da DMZ às outras subredes da ICI? Sim
 
 ### Criou um novo nó para instalar o IDS na rede da DMZ? Sim
 
-### Instalou o IDS na rede DMZ?
+### Instalou o IDS na rede DMZ? Parcialmente 
 
-### Instalou o IDS na subrede corporate?
+### Instalou o IDS na subrede corporate? Parcialmente
 
-### Indique o conteúdo do teste usado para testar o IDS
+### Indique o conteúdo do teste usado para testar o IDS 
 
 ### Configurou DHCP? Funciona? Sim. Funciona
 
