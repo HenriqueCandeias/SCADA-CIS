@@ -121,6 +121,7 @@ SSH
 
 TESTES SSH
 
+No pcinternet, pceng1 e pceng2, fazer os seguintes comandos:
 * cd /home/
 * touch test.txt
 * scp test.txt admin@95.92.194.2:/home/admin
@@ -128,10 +129,12 @@ TESTES SSH
 * ssh admin@95.92.194.2
 * cd /home/admin
 * ls
+Verificar que aparece o ficheiro test.txt
 * exit
 * ssh admin@95.92.194.3
 * cd /home/admin
 * ls
+Verificar que aparece o ficheiro test.txt
 * exit
 
 
