@@ -165,6 +165,7 @@ Escolhemos o NIDS, expecificamente o snort.
 ## Conclusão
 
 *(o que foi alcançado)*
+Com este projeto, o grupo relembrou muito dos conceitos base aprendidos na cadeira de Arquitetura de Redes - configuração de equipamentos, garantir conectividade numa dada rede - embora de uma forma mais simples (não foi necessãrio, neste projeto, configurar protocolos de routing). Assim, este projeto complementa o que já foi dito porque, para além de garantir conectividade numa rede, é preciso garantir a sua segurança. 
 
 *(pontos fortes, pontos a melhorar)*
 
