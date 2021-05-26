@@ -4,3 +4,57 @@ ip link set dev eth0 up
 ip link set dev eth1 up
 
 ip route add default via 169.254.3.2
+
+##############
+# Snort config
+##############
+
+# Install dependencies
+
+#apt update
+#apt install -y gcc libpcre3-dev zlib1g-dev libluajit-5.1-dev libpcap-dev openssl libssl-dev libnghttp2-dev libdumbnet-dev bison flex libdnet autoconf libtool
+
+# Install DAQ
+
+cp /shared/daq-2.0.7.tar.gz /
+tar xvzf daq-2.0.7.tar.gz
+
+cd daq-2.0.7
+./configure && make && make install
+cd ..
+
+# Install Snort itself
+
+cp /shared/snort-2.9.17.1.tar.gz /
+tar xvzf snort-2.9.17.1.tar.gz
+                      
+cd snort-2.9.17.1
+./configure --enable-sourcefire && make && make install
+cd ..
+
+# Update shared libraries
+
+ldconfig
+ln -s /usr/local/bin/snort /usr/sbin/snort
+
+# Create the folders for the configuration files
+
+mkdir -p /etc/snort/rules
+mkdir /var/log/snort
+mkdir /usr/local/lib/snort_dynamicrules
+
+touch /etc/snort/rules/white_list.rules
+touch /etc/snort/rules/black_list.rules
+touch /etc/snort/rules/local.rules
+
+# Copy the configuration files from the downloaded files
+
+cp snort-2.9.17.1/etc/*.conf* /etc/snort
+cp snort-2.9.17.1/etc/*.map /etc/snort
+
+# Configure the community rules
+
+cp shared/community-rules.tar.gz /
+tar -xvzf community-rules.tar.gz -C /etc/snort/rules
+sed -i 's/include \$RULE\_PATH/#include \$RULE\_PATH/' /etc/snort/snort.conf
+
