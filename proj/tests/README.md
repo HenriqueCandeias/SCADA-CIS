@@ -116,7 +116,7 @@ e ver que não funciona (tráfego bloqueado pela firewall)
 
 
 
-SSH
+### SSH
 
 
 TESTES SSH
@@ -129,12 +129,12 @@ No pcinternet, pceng1 e pceng2, fazer os seguintes comandos:
 * ssh admin@95.92.194.2
 * cd /home/admin
 * ls
-Verificar que aparece o ficheiro test.txt
+#### Verificar que aparece o ficheiro test.txt
 * exit
 * ssh admin@95.92.194.3
 * cd /home/admin
 * ls
-Verificar que aparece o ficheiro test.txt
+#### Verificar que aparece o ficheiro test.txt
 * exit
 
 
