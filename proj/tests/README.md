@@ -19,8 +19,10 @@ TESTE DHCP
 
 Na consola do PC SCADA, testar conectividade com o PC Eng1: 
 * ping <Endereço IP dinàmico do PC Eng1>
+
 Na consola do PC Subestacao 1, testar conectividade com o PC SCADA: 
 * ping <Endereço IP dinâmico do PC SCADA>
+
 
 
 TESTE SSH
