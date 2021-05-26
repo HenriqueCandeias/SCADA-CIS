@@ -1,12 +1,12 @@
 ### TESTES PROGRAMA DE ACESSO À WEB (HTTP)
 
-De forma a testar o funcionamento do curl, de forma a obter as páginas web, foram feitos os seguintes comandos no web server:
+Para testar o funcionamento do curl, de forma a obter as páginas web, foram feitos os seguintes comandos no PCInternet:
 
 * curl -v 'http://95.92.194.3/public/siteEng1.html'
 * curl -v 'http://95.92.194.3/public/siteEng2.html'
 * curl -v 'http://95.92.194.3/public/siteICI.html'
 
-e ver que ná funciona (tráfego bloqueado pela firewall)
+e ver que não funciona (tráfego bloqueado pela firewall)
 
 
 ### TESTES PROGRAMA DE ACESSO À WEB (HTTPS)
@@ -53,7 +53,7 @@ e ver que funciona.
 
 NOTA: O teste ao DNS não funciona, pela sua implementação parcial.
 
-Depois, para mostrar que apenas se pode aceder aos serviços a partir do PCInternt, fazer ping desde o PCInternet a uma máquina da LAN serviços:
+Depois, para mostrar que apenas se pode aceder aos serviços a partir do PCInternet, fazer ping desde o PCInternet a uma máquina da LAN serviços:
 
 * ping 95.92.194.3
 
