@@ -3,7 +3,7 @@ TESTE PROGRAMA DE ACESSO À WEB (HTTP)
 De forma a testar o funcionamento do curl, de forma a obter as páginas web, foram feitos os seguintes comandos no web server:
 
 * curl -v 'http://95.92.194.3/public/siteEng1.html'
-* curl -v 'http://localhost/public/siteEng2.html'
+* curl -v 'http://95.92.194.3/public/siteEng2.html'
 * curl -v 'http://95.92.194.3/public/siteICI.html'
 
 Esperamos, como ouput que, na consola, seja sugerido que o a página foi mudada para HTTPS.
