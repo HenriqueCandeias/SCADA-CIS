@@ -1,4 +1,4 @@
-TESTE PROGRAMA DE ACESSO À WEB (HTTP)
+TESTES PROGRAMA DE ACESSO À WEB (HTTP)
 
 De forma a testar o funcionamento do curl, de forma a obter as páginas web, foram feitos os seguintes comandos no web server:
 
@@ -9,7 +9,7 @@ De forma a testar o funcionamento do curl, de forma a obter as páginas web, for
 Esperamos, como ouput que, na consola, seja sugerido que o a página foi mudada para HTTPS.
 
 
-TESTE PROGRAMA DE ACESSO À WEB (HTTPS)
+TESTES PROGRAMA DE ACESSO À WEB (HTTPS)
 
 A partir do PCInternet aceder às páginas disponíveis no servidor WWWW:
 
@@ -17,11 +17,13 @@ A partir do PCInternet aceder às páginas disponíveis no servidor WWWW:
 * curl -k 'https://95.92.194.3/public/siteEng1.html'
 * curl -k 'https://95.92.194.3/public/siteEng2.html'
 
+Esperamos, como output, que todas as páginas dêm resposta.
+
 Se funcionasse, de forma a testar que os certificados se encontram no PCEng1 (onde foi guardado o certificado), para fazer o curl sem o '-k':
 
 * curl 'https://95.92.194.3/public/siteICI.html'
 
-TESTE DHCP
+TESTES DHCP
 
 1. Após fazer "kathara lstart", anallisar as consolas dos containers que são DHCP servers e DHCP clients e concluir que o DHCP está a funcionar
 2. Fazer "ip a" nos DHCP clients e visualizar que foi atribuído um endereço dentro da range estabelecida
@@ -33,7 +35,17 @@ Na consola do PC SCADA, testar conectividade com o PC Eng1:
 Na consola do PC Subestacao 1, testar conectividade com o PC SCADA: 
 * ping <Endereço IP dinâmico do PC SCADA>
 
+TESTES FIREWALL
 
+Fazer um curl de uma página em HTTPS desde o PCEng1 para o servidor WWW e ver que não funciona:
+
+curl -k 'https://95.92.194.3/public/siteICI.html'
+
+Agora, fazer curl de uma página em HTTPS desde o PCInternet para o servidor WWW:
+
+curl -k 'https://95.92.194.3/public/siteICI.html'
+
+Esperamos, como output, que a página em questão seja devolvida.
 
 TESTE SSH
 * cd /home/
