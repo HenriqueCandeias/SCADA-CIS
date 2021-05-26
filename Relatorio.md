@@ -129,6 +129,8 @@ Na primeira interpretação do enunciado, tínhamos a seguinte topologia:
 #### VPN
 
 #### SSH
+Para a implementação deste serviço, foram previamente obtidas as chaves pública e privada do pcinternet, pceng1 e pceng2, com recurso ao comando 'ssh-keygen -t rsa' e guardadas na pasta shared. Criou-se também o ficheiro authorized_keys para o dnsacdcpt e para o wwwacdcpt, contendo as chaves públicas de cada uma das máquinas anteriores, e guardaram-se esses ficheiros também na pasta shared. Nos ficheiros de dnsacdcpt.startup e no wwwacdcpt.startup, inicia-se o serviço ssh, cria-se o utilizador 'admin' com a opção de autenticação por password desativada e copia-se o ficheiro authorized_keys respetivo da pasta shared para o container docker. Nos ficheiros de pcinternet.startup, pceng1.startup e pceng2.startup, copiam-se as chaves previamente criadas na pasta shared para os respetivos containers.
+A criação prévia de ficheiros deveu-se ao facto de existir dependências de comandos entre máquinas, e de não se conseguir garantir uma ordem de início entre as mesmas.
 
 #### FIREWALLS
 

@@ -20,3 +20,19 @@ ip route add 95.92.194.0/23 via 169.254.3.1 dev eth3  #Network Router-Edificio-C
 ip route add 95.92.192.0/23 via 169.254.2.1 dev eth4  #Network Router-Edificio-Central <-> Router-IDS-Corporate
 
 ip route add default via 169.254.4.2 dev eth2
+
+# Firewall
+
+#iptables -A FORWARD -p tcp -s 88.60.0.0/22 -d 95.92.194.0/23 --dport 22 -j ACCEPT   #not working
+#iptables -A FORWARD -p tcp -s 88.60.0.0/22 -d 95.92.194.0/23 --dport 443 -j ACCEPT  #not working
+#iptables -A FORWARD -p tcp -s 88.60.0.0/22 -d 95.92.194.2 --dport 53 -j ACCEPT      #not working
+#iptables -A FORWARD -p tcp -s 95.92.192.0/20 -d 95.92.194.2 --dport 53 -j ACCEPT
+#iptables -A FORWARD -p tcp -s 95.92.198.0/20 -d 95.92.194.2 --dport 53 -j DROP
+#iptables -A FORWARD -p icmp -s 95.92.192.0/20 -d 95.92.194.2 -j ACCEPT
+#iptables -A FORWARD -p icmp -s 95.92.192.0/20 -d 88.60.0.0/22 -j ACCEPT
+#iptables -A FORWARD -j DROP
+#iptables -A INPUT -j DROP
+
+
+
+

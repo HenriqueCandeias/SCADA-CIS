@@ -1,12 +1,10 @@
-#ip addr add dev eth0 95.92.192.3/23 #REMOVE AFTER DHCP
-#ip link set dev eth0 up
-
-#ip route add default via 95.92.192.1 #REMOVE AFTER DHCP???
-
-#Start DHCP client
+##Start DHCP client
 /etc/init.d/networking restart
 
-# SSH config
+
+##SSH config
+
+#Copy the already created keys and known hosts file into pceng2 container
 cp -a /shared/ssh/pceng2/. /root/.ssh/
 cd /root/.ssh/
 chmod 700 id_rsa id_rsa.pub known_hosts
