@@ -2,7 +2,7 @@ Group project for Técnico's "Network and Computer Security" BSc course. Grade: 
 
 Skills: **Linux Administration**, **Network Security and Architectures**, **Container Deployment**.
 
-This project consisted of configuring the critical information infrastructure for a cyber-physical system - more specifically, the information system used by a country-wide electricity supplier. The network's structure was designed and implemented such that communications to the internet and specific remote machines could be performed securely. The Figure below represents the system, which was developed in a laboratory environment using [Kathará](https://www.kathara.org/) - a container-based network emulation system. 
+This project consisted of configuring the critical information infrastructure for a cyber-physical system - more specifically, the information system used by a country-wide electricity supplier to perform Supervisory Control and Data Acquisition (SCADA) activities. The network's structure was designed and implemented such that communications to the internet and specific remote machines could be performed securely. The Figure below represents the system, which was developed in a laboratory environment using [Kathará](https://www.kathara.org/) - a container-based network emulation system. 
 
 ![Network Topology](https://github.com/HenriqueCandeias/sirs-g6/blob/main/Topologia_da_Rede.jpg)
 
